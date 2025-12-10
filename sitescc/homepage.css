@@ -1,80 +1,78 @@
 body {
+    height: 100vh;
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    overflow: visible;
 }
 
 /* HEADER */
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
     border-bottom: 2px solid white;
+    height: 60px;
+    width: auto;
+
+    margin-bottom: 0px;
 }
 
 .logo {
-    width: 200px;
+    width: 250px;
     height: auto;
-    box-sizing: content-box;
 }
-
-.menu-button {
-    background: none;
-    color: white;
-    border: 1px solid white;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
 /* HERO */
 .hero {
     text-align: center;
-    padding: 40px 20px;
-}
-
-.hero-img {
-    width: 260px;
-    height: auto;
-    margin: 40px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 h1 {
-    font-size: 48px;
-    margin: 20px 0 10px;
+    font-size: 80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.hero-img {
+    width: 300px;
+    height: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 h2 {
-    font-size: 32px;
-    margin-bottom: 5px;
+    font-size: 70px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-p {
-    font-size: 18px;
+.pdiv {
+    font-size: 30px;
+    margin-top: 0px;
     margin-bottom: 30px;
 }
 
 .bio-button {
-    padding: 14px 30px;
+    width: 200px;
+    height: 50px;
     font-size: 18px;
-    background: none;
     border: 2px solid white;
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 25px;
     cursor: pointer;
-
+    margin-top: 0px;
+    margin-bottom: 100px;
+    background-color: black;
 }
-a:bio-button {
-    color: white;
-}
 
-/* FOOTER */
+
 .footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid white;
-    margin-top: 40px;
+    text-align: left;
+    padding: 10px;
+    border-top: 2px solid white;
+    height: 60px;
+    width: auto;
+    font-size: 15px;
 }
