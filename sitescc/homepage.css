@@ -1,0 +1,80 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid white;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    box-sizing: content-box;
+}
+
+.menu-button {
+    background: none;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-img {
+    width: 260px;
+    height: auto;
+    margin: 40px 0;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 20px 0 10px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.bio-button {
+    padding: 14px 30px;
+    font-size: 18px;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+
+}
+a:bio-button {
+    color: white;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid white;
+    margin-top: 40px;
+}
