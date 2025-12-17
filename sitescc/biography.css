@@ -11,7 +11,6 @@ body {
     height: 50px;
     width: 100%;
     margin-bottom: 0px;
-
 }
 .logo {
     padding-top: 0px;
@@ -20,74 +19,78 @@ body {
     height: auto;
 }
 
-
-
 .biography-image{
     display: block;
     margin: 0 auto;
-    width: 380px;
+    width: 370px;
     height: auto;
     margin-top: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border-radius: 15px;
+    border: 2px solid rgb(11, 0, 65);
 }
 
 .h1body {
     text-align: left;
     font-size: 36px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.pvisivel{
     margin-top: 0px;
-    margin-bottom: 20px;
-
+    margin-bottom: 10px;
 }
 
+
+h2 {
+    text-align: left;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
 
 .highlights {
-    text-align: left;
-    align-items: left;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 10px;
+    justify-items: center;                
+    align-items: center;
 }
-.bronzeclub {
+.bronzeclub, .nbar, .fnc {
     display: block;
-    width: 100px;
-    height: auto;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    margin-left:0px ;
-    margin-right: 0px;
-    border-radius: 15px;
-}
-.nbar {
-    display: block;
-    width: 100px;
-    height: auto;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    margin-left:0px ;
-    margin-right: 0px;
-    border-radius: 15px;
-}
-.fnc {
-     display: block;
-    width: 100px;
-    height: auto;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    margin-left:0px ;
-    margin-right: 0px;
-    border-radius: 15px;
+    width: 100%;          
+    max-width: 110px;
+    border-radius: 10px;
+    border: 2px solid rgb(42, 42, 42);
 }
 
 .booknow {
     width: 200px;
     height: 50px;
     font-size: 18px;
-    margin-top: 0px;
+    border: 2px solid white;
+    color: rgb(255, 255, 255);
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
     margin-bottom: 100px;
+    background-color: black;
+}
+.booknow:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
 }
 
 .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: left;
     border-top: 2px solid white;
     font-size: 15px;
     height: 50px;
-    position: fixed;
 }
