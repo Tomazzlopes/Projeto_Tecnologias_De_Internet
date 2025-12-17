@@ -1,9 +1,7 @@
 body {
-    height: 100vh;
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
-    overflow: visible;
 }
 
 /* HEADER */
@@ -12,16 +10,18 @@ body {
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid white;
-    height: 60px;
+    height: 50px;
     width: auto;
-
     margin-bottom: 0px;
 }
 
 .logo {
+    padding-top: 0px;
+    padding-bottom: 5px;
     width: 250px;
     height: auto;
 }
+
 /* HERO */
 .hero {
     text-align: center;
@@ -30,13 +30,13 @@ body {
 }
 
 h1 {
-    font-size: 80px;
-    margin-top: 0px;
+    font-size: 70px;
+    margin-top: 50px;
     margin-bottom: 0px;
 }
 
 .hero-img {
-    width: 300px;
+    width: 350px;
     height: auto;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -51,7 +51,7 @@ h2 {
 .pdiv {
     font-size: 30px;
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .bio-button {
@@ -63,8 +63,14 @@ h2 {
     border-radius: 25px;
     cursor: pointer;
     margin-top: 0px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     background-color: black;
+    
+}
+.bio-button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
 }
 
 
@@ -72,7 +78,9 @@ h2 {
     text-align: left;
     padding: 10px;
     border-top: 2px solid white;
-    height: 60px;
+    height: 50px;
     width: auto;
     font-size: 15px;
+    position: relative;
+    margin-top: 50px;
 }
