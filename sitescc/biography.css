@@ -3,18 +3,16 @@ body {
     color: white;
     font-family: Arial, sans-serif;
 }
-
-
 .headerbio {
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid white;
     height: 50px;
-    width: auto;
+    width: 100%;
     margin-bottom: 0px;
-}
 
+}
 .logo {
     padding-top: 0px;
     padding-bottom: 5px;
@@ -27,10 +25,54 @@ body {
 .biography-image{
     display: block;
     margin: 0 auto;
-    width: 350px;
+    width: 380px;
     height: auto;
     margin-top: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.h1body {
+    text-align: left;
+    font-size: 36px;
+    margin-top: 0px;
     margin-bottom: 20px;
+
+}
+
+
+.highlights {
+    text-align: left;
+    align-items: left;
+}
+.bronzeclub {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left:0px ;
+    margin-right: 0px;
+    border-radius: 15px;
+}
+.nbar {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left:0px ;
+    margin-right: 0px;
+    border-radius: 15px;
+}
+.fnc {
+     display: block;
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left:0px ;
+    margin-right: 0px;
     border-radius: 15px;
 }
 
