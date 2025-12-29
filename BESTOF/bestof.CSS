@@ -1,126 +1,113 @@
+/* --- ESTILO GLOBAL (BODY) --- */
 body {
-    background-color: black;
-    color: white;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
+    background-color: black; /* Define a cor de fundo de toda a página */
+    color: white;             /* Define a cor padrão de todos os textos */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Define o tipo de letra */
+    margin: 0;                /* Remove as margens brancas que o navegador coloca por padrão */
 }
 
-/* Header */
+/* --- CABEÇALHO (HEADER) --- */
 .headerbestof {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #333;
-    height: 70px;
-    background: rgba(0,0,0,0.9);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    display: flex;            /* Ativa o modo flexbox para alinhar itens */
+    justify-content: center;  /* Alinha o logo no centro horizontalmente */
+    align-items: center;      /* Alinha o logo no centro verticalmente */
+    border-bottom: 2px solid #ffffff; /* Cria uma linha branca por baixo do cabeçalho */
+    height: 70px;             /* Define a altura fixa do cabeçalho */
+    background: rgba(0,0,0,0.9); /* Fundo preto com 90% de opacidade (um pouco transparente) */
+    position: sticky;         /* Faz o cabeçalho ficar "colado" no topo */
+    top: 0;                   /* Define que a colagem é exatamente no topo (0 pixels) */
+    z-index: 100;             /* Garante que o cabeçalho fique por cima de tudo o resto */
 }
 
 .logo {
-    width: 200px;
-    height: auto;
+    width: 200px;             /* Define a largura do teu logótipo */
+    height: auto;             /* Ajusta a altura automaticamente para não distorcer a imagem */
 }
 
-
+/* --- TÍTULO PRINCIPAL (DIV 1) --- */
 .div1 {
-    text-align: center;
-    padding: 60px 20px;
-    border-bottom: 1px solid #333;
+    text-align: center;       /* Centra o texto */
+    height: 100px;            /* Define a altura da secção do título */
+    width: 100%;              /* Ocupa a largura total do ecrã */
+    padding-bottom: 25px;     /* Dá um espaço extra no fundo, dentro da div */
+    border-bottom: 2px solid #ffffff; /* Linha branca separadora */
 }
 
 .div1 h1 {
-    font-size: 3rem;
-    letter-spacing: 5px;
-    margin-bottom: 5px;
+    font-size: 3rem;          /* Define um tamanho de letra grande */
+    letter-spacing: 5px;      /* Dá espaço entre as letras do título */
+    margin-bottom: 5px;       /* Reduz o espaço entre o H1 e o parágrafo de baixo */
 }
 
-
+/* --- GRELHA DE FOTOS E VÍDEOS (DIV 2 e 3) --- */
 .div2, .div3 {
-    display: grid;
+    display: grid;            /* Ativa o sistema de grelha (colunas e linhas) */
+    /* Cria colunas automáticas: mínimo 320px cada, ou divide o espaço igualmente (1fr) */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 30px;                /* Define o espaço (buraco) entre cada item da grelha */
+    padding: 40px 20px;       /* Margens internas: 40px em cima/baixo, 20px dos lados */
+    max-width: 1200px;        /* Impede que a galeria se estique demais em ecrãs muito grandes */
+    margin: 0 auto;           /* Centra o bloco da galeria no meio da página */
 }
 
-
+/* --- A MOLDURA (WRAPPER) --- */
 .image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    border: 1px solid #222;
+    position: relative;       /* IMPORTANTE: Funciona como uma âncora para o texto do overlay */
+    width: 100%;              /* Ocupa a largura total da coluna da grelha */
+    height: 400px;            /* Define uma altura fixa para todas as fotos e vídeos */
+    border-radius: 12px;      /* Arredonda os cantos da moldura */
+    overflow: hidden;         /* Esconde tudo o que sair fora da moldura (ex: no efeito de zoom) */
+    transition: transform 0.3s ease; /* Faz com que o movimento de zoom seja suave */
+    border: 1px solid #808080; /* Uma borda cinzenta fina */
 }
 
+/* Efeito quando passas o rato na moldura */
 .image-wrapper:hover {
-    transform: scale(1.02);
+    transform: scale(1.02);   /* Aumenta a moldura ligeiramente (2%) */
 }
 
+/* --- CONTEÚDO (CLASSE .FOTO APLICADA A IMAGENS E VÍDEOS) --- */
 .foto {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    width: 100%;              /* Enche a largura da moldura */
+    height: 100%;             /* Enche a altura da moldura */
+    object-fit: cover;        /* Corta as bordas para a imagem/vídeo caber sem ficar esticado */
+    transition: transform 0.5s ease; /* Suaviza o zoom interno */
 }
 
+/* Efeito de zoom na imagem/vídeo quando o rato passa por cima da moldura */
 .image-wrapper:hover .foto {
-    transform: scale(1.1);
+    transform: scale(1.1);    /* Aumenta a imagem/vídeo em 10% */
 }
 
-
+/* --- CAMADA DE TEXTO (OVERLAY) --- */
 .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
+    position: absolute;       /* Retira o texto do lugar e permite flutuar sobre a foto */
+    bottom: 0;                /* Cola o texto no fundo da moldura */
+    left: 0;                  /* Alinha à esquerda */
+    right: 0;                 /* Estica até à direita */
+    padding: 20px;            /* Espaço entre o texto e as bordas da foto */
+    /* Cria um fundo escurecido de baixo para cima para facilitar a leitura */
     background: linear-gradient(transparent, rgba(0,0,0,0.9));
-    text-align: left;
+    text-align: left;         /* Alinha o texto à esquerda */
+    pointer-events: none;     /* Faz com que o texto seja "invisível" ao clique (ajuda nos vídeos) */
 }
 
-.overlay h1 {
-    font-size: 1.2rem;
-    margin: 0;
-    color: white;
-}
-
-.overlay p {
-    font-size: 0.9rem;
-    color: #ccc;
-    margin: 5px 0 0 0;
-}
-
-
-.video {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 12px;
-    background: #111;
-    border: 1px solid #222;
-}
-
-/* Footer */
+/* --- RODAPÉ (FOOTER) --- */
 .footer {
-    text-align: center;
-    padding: 30px;
-    background: black;
-    border-top: 1px solid #333;
-    margin-top: 50px;
+    text-align: center;       /* Centra o copyright */
+    padding: 30px;            /* Espaço interno */
+    background: black;        /* Cor de fundo preta */
+    border-top: 1px solid #333; /* Linha cinzenta discreta no topo do rodapé */
+    margin-top: 50px;         /* Espaço entre a galeria e o rodapé */
 }
 
-/* Responsividade Mobile */
+/* --- RESPONSIVIDADE (TELEMÓVEIS) --- */
 @media screen and (max-width: 768px) {
+    /* Se o ecrã for menor que 768px, faz isto: */
     .div2, .div3 {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Força a galeria a ter apenas 1 coluna */
     }
-    
     .div1 h1 {
-        font-size: 2rem;
+        font-size: 2rem;       /* Diminui o tamanho do título para caber no ecrã do telemóvel */
     }
 }

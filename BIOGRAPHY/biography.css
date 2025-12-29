@@ -1,76 +1,80 @@
+/* --- FUNDO E TEXTO GERAL --- */
 body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
+    background-color: black; /* Fundo do site sempre a preto */
+    color: white;             /* Texto principal em branco */
+    font-family: Arial, sans-serif; /* Tipo de letra simples e limpa */
 }
+
+/* --- CABEÇALHO DA BIO --- */
 .headerbio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid #ffffff;
-    height: 50px;
-    width: 100%;
-    margin-bottom: 0px;
+    display: flex;            /* Ativa o Flexbox para alinhar o logo */
+    justify-content: center;  /* Centra o logo horizontalmente */
+    align-items: center;      /* Centra o logo verticalmente */
+    border-bottom: 2px solid #ffffff; /* Linha branca grossa no fundo do header */
+    height: 50px;             /* Altura total do cabeçalho */
+    width: 100%;              /* Garante que ocupa a largura total do ecrã */
+    margin-bottom: 0px;       /* Garante que não há espaço extra abaixo da linha */
 }
+
 .logo {
     padding-top: 0px;
     padding-bottom: 5px;
-    width: 250px;
-    height: auto;
+    width: 200px;             /* Define o tamanho do logo da marca */
+    height: auto;             /* Mantém a proporção da imagem */
 }
 
-.biography-image{
-    display: block;
-    margin: 0 auto;
-    width: 370px;
+/* --- IMAGEM DE PERFIL/BIO --- */
+.biography-image {
+    display: block;           /* Permite o uso de margens automáticas para centrar */
+    margin: 20px auto 5px;    /* Centra: 20px em cima, auto dos lados, 5px em baixo */
+    width: 370px;             /* Largura da tua foto de DJ */
     height: auto;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    border-radius: 15px;
-    border: 2px solid #adadad;
+    border-radius: 15px;      /* Arredonda os cantos da foto */
+    border: 2px solid #adadad; /* Moldura cinzenta clara em volta da foto */
 }
 
+/* --- TÍTULOS E PARÁGRAFOS --- */
 .h1body {
-    text-align: left;
-    font-size: 36px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    text-align: left;         /* Alinha o título "MRLOPEZ" à esquerda */
+    font-size: 36px;          /* Letra grande para o nome principal */
+    margin: 5px 0;            /* Espaço de 5px em cima e em baixo */
     color: #ffffff;
 }
-.pvisivel{
-    margin-top: 0px;
-    margin-bottom: 10px;
-}
 
+.pvisivel {
+    margin-top: 0px;
+    margin-bottom: 10px;      /* Espaçamento curto entre parágrafos da bio */
+}
 
 h2 {
     text-align: left;
     color: #ffffff;
-    font-size: 28px;
+    font-size: 28px;          /* Tamanho intermédio para subtítulos */
     margin-top: 20px;
     margin-bottom: 5px;
 }
 
+/* --- GRELHA DE DESTAQUES/LOGOS (Clubs) --- */
 .highlights {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 10px;
-    justify-items: center;                
-    align-items: center;
-    margin-top: auto;
+    display: grid;            /* Cria uma grelha para os logos dos clubes */
+    grid-template-columns: repeat(3, 1fr); /* Divide em 3 colunas de tamanhos iguais */
+    grid-template-rows: repeat(1, 1fr);    /* Define apenas 1 linha */
+    gap: 10px;                /* Espaço de 10px entre cada logo */
+    justify-items: center;    /* Centra os logos dentro de cada coluna */
+    align-items: center;      /* Alinha os logos verticalmente */
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
 }
+
+/* Logos específicos: Bronze Club e FNC */
 .bronzeclub, .fnc {
     display: block;
     width: 100%;          
-    max-width: 110px;
+    max-width: 110px;         /* Limita o tamanho para os logos não ficarem gigantes */
     border-radius: 10px;
-    border: 2px solid rgb(42, 42, 42);
+    border: 2px solid rgb(42, 42, 42); /* Borda cinzenta escura discreta */
 }
 
+/* Logo específico: NBAR (tem dimensões diferentes) */
 .nbar {
     display: block;
     width: 120px;          
@@ -79,32 +83,34 @@ h2 {
     border: 2px solid rgb(42, 42, 42);
 }
 
+/* --- BOTÃO "BOOK NOW" --- */
 .booknow {
     width: 200px;
     height: 50px;
     font-size: 18px;
-    border: 2px solid white;
-    color: rgb(255, 255, 255);
-    border-radius: 25px;
-    cursor: pointer;
-    margin-left: 85px;
-    margin-right: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: black;
-}
-.booknow:hover {
-    background-color: white;
-    color: black;
-    transition: 0.3s;
+    border: 2px solid white;  /* Botão com moldura branca */
+    color: white;             /* Letras brancas */
+    border-radius: 25px;      /* Botão totalmente arredondado (estilo pílula) */
+    cursor: pointer;          /* O rato transforma-se em "mãozinha" ao passar por cima */
+    margin: 20px 50px 20px 85px; /* Margens personalizadas para posicionar o botão */
+    background-color: black;  /* Fundo inicial preto */
 }
 
+/* Efeito ao passar o rato no botão */
+.booknow:hover {
+    background-color: white;  /* Inverte as cores: fundo branco */
+    color: black;             /* Letras pretas */
+    transition: 0.3s;         /* Faz a troca de cor demorar 0.3 segundos (suave) */
+}
+
+/* --- RODAPÉ FIXO --- */
 .footer {
-    position: fixed;
-    bottom: 0;
+    position: fixed;          /* O rodapé fica sempre "preso" no fundo do ecrã */
+    bottom: 0;                /* Cola mesmo no limite inferior */
     width: 100%;
     text-align: left;
-    border-top: 2px solid white;
+    border-top: 2px solid white; /* Linha branca no topo do rodapé */
     font-size: 15px;
     height: 50px;
+    background-color: black;  /* Adicionado para garantir que o texto não se misture com a bio */
 }
