@@ -1,0 +1,134 @@
+/* Importa as bases do teu estilo anterior */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+}
+
+.headerbestof {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #ffffff;
+    height: 70px;
+    background: rgba(0,0,0,0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.div1 {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 2px solid #ffffff;
+}
+
+.div1 h1 {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+/* --- ESTILO ESPECÍFICO DA AGENDA --- */
+.agenda-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.agenda-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.agenda-item:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+.date-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    border-right: 2px solid #ffffff;
+    margin-right: 30px;
+}
+
+.date-box .day {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.date-box .month {
+    font-size: 0.9rem;
+    color: #808080;
+}
+
+.event-details {
+    flex-grow: 1;
+}
+
+.event-details h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.event-details p {
+    margin: 5px 0 0;
+    color: #b3b3b3;
+}
+
+.status-btn {
+    padding: 8px 15px;
+    border: 1px solid #ffffff;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+/* Estilo para eventos passados */
+.past-event {
+    opacity: 0.5;
+    filter: grayscale(1);
+}
+
+/* Rodapé igual ao original */
+.footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    .agenda-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .date-box {
+        border-right: none;
+        border-bottom: 2px solid #fff;
+        margin-right: 0;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+    .event-status {
+        margin-top: 20px;
+    }
+}
