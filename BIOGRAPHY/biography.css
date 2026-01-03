@@ -22,6 +22,45 @@ body {
     width: 200px;             /* Define o tamanho do logo da marca */
     height: auto;             /* Mantém a proporção da imagem */
 }
+.logo {
+    width: auto;
+    height: 200px;
+    margin: 0;
+    margin-left: 480px;
+    margin-right: 150px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 0;
+    align-self: flex-end;
+    flex-wrap: wrap
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+
+.nav-links li {
+    border: 2px white;
+}
+
+.nav-links li :hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
 
 /* --- IMAGEM DE PERFIL/BIO --- */
 .biography-image {

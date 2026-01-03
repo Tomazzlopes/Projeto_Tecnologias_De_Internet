@@ -12,38 +12,49 @@ body {
     border-bottom: 2px solid white;
     height: 50px;
     width: auto;
-    margin-bottom: 0;
 }
 
 
 .logo {
     width: auto;
     height: 200px;
-}
-
-/*ul {
-    list-style-type: none;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    align-items: flex-start;
-}
-ul li {
-    float: left;
-}
-ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    margin-left: 480px;
+    margin-right: 150px;
 }
 
-ul li a:hover {
-    background-color: #111111;
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 0;
+    align-self: flex-end;
+    flex-wrap: wrap
 }
-*/
-/* HERO */
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+
+.nav-links li {
+    border: 2px white;
+}
+
+.nav-links li :hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+
 .hero {
     text-align: center;
     padding-top: 20px;
