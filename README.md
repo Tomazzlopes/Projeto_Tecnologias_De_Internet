@@ -8,5 +8,4 @@ Tomás Rodrigues Lopes
 https://tomazzlopes.github.io/Projeto_Tecnologias_De_Internet/homepage.html
 
 # QR Code
-
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/1827614e-869a-462d-9ca4-71a9053d52c3" />
+<img width="500" height="500" alt="adobe-express-qr-code" src="https://github.com/user-attachments/assets/5362226a-3ccb-4ca3-891a-cd3515eda81d" />
