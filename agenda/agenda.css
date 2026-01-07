@@ -19,6 +19,7 @@ body {
 }
 
 .logo {
+    height: 110px;
     width: auto;
     height: 200px;
     margin: 0;
@@ -150,8 +151,23 @@ body {
     margin-top: 50px;
 }
 
-/* Responsividade */
-@media screen and (max-width: 600px) {
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+
+    .headerbestof { padding: 0 15px; height: 70px; }
+    .logo { height: 80px; }
+    .nav-links { gap: 10px; }
+    .div1 { margin-top: 70px; height: 100px; }
+    .div1 h1 { font-size: 1.8rem; }
+
+    #video-background {
+        top: 60px;
+        height: calc(100% - 60px);
+    }
+}
+
     .agenda-item {
         flex-direction: column;
         text-align: center;
@@ -163,7 +179,3 @@ body {
         margin-bottom: 15px;
         padding-bottom: 10px;
     }
-    .event-status {
-        margin-top: 20px;
-    }
-}
