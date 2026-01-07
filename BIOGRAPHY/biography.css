@@ -125,9 +125,10 @@ h2 {
     color: white;
     border-radius: 25px;
     cursor: pointer;
-    margin: 20px 50px 20px 85px;
+    margin: 20px 0px 20px 610px;
     background-color: black;
     font-weight: 300;
+    
 }
 
 .booknow:hover {
@@ -153,5 +154,4 @@ h2 {
     .headerhome { padding: 0 15px; height: 70px; }
     .logo { height: 80px; }
     .nav-links { gap: 10px; }
-    
 }
