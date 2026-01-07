@@ -1,13 +1,15 @@
-/* --- ESTILO GLOBAL (BODY) --- */
+
 body {
-    background-color: black; /* Define a cor de fundo de toda a página */
-    color: white;             /* Define a cor padrão de todos os textos */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Define o tipo de letra */
-    margin: 0;                /* Remove as margens brancas que o navegador coloca por padrão */
+    background-color: black;
+    color: white;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    
+    padding-top: 100px; 
 }
 
-/* --- CABEÇALHO (HEADER) --- */
-.headerbestof {
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,7 +25,7 @@ body {
     margin-bottom: 50px;
 }
 
-/* LOGO */
+
 .logo {
     height: 110px;
     width: auto;
@@ -31,7 +33,7 @@ body {
     display: block;
 }
 
-/* NAV */
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -59,90 +61,112 @@ body {
 }
 
 
-/* --- TÍTULO PRINCIPAL (DIV 1) --- */
 .div1 {
-    text-align: center;       /* Centra o texto */
-    height: 100px;            /* Define a altura da secção do título */
-    width: 100%;              /* Ocupa a largura total do ecrã */
-    padding-bottom: 25px;     /* Dá um espaço extra no fundo, dentro da div */
-    border-bottom: 2px solid #ffffff; /* Linha branca separadora */
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 2px solid #ffffff;
+    background: transparent; 
 }
 
 .div1 h1 {
-    font-size: 3rem;          /* Define um tamanho de letra grande */
-    letter-spacing: 5px;      /* Dá espaço entre as letras do título */
-    margin-bottom: 5px;       /* Reduz o espaço entre o H1 e o parágrafo de baixo */
+    font-size: 3.5rem;
+    letter-spacing: 8px;
+    margin: 0;
+    text-transform: uppercase;
 }
 
-/* --- GRELHA DE FOTOS E VÍDEOS (DIV 2 e 3) --- */
+.div1 p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
 .div2, .div3 {
-    display: grid;            /* Ativa o sistema de grelha (colunas e linhas) */
-    /* Cria colunas automáticas: mínimo 320px cada, ou divide o espaço igualmente (1fr) */
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;                /* Define o espaço (buraco) entre cada item da grelha */
-    padding: 40px 20px;       /* Margens internas: 40px em cima/baixo, 20px dos lados */
-    max-width: 1200px;        /* Impede que a galeria se estique demais em ecrãs muito grandes */
-    margin: 0 auto;           /* Centra o bloco da galeria no meio da página */
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-/* --- A MOLDURA (WRAPPER) --- */
 .image-wrapper {
-    position: relative;       /* IMPORTANTE: Funciona como uma âncora para o texto do overlay */
-    width: 100%;              /* Ocupa a largura total da coluna da grelha */
-    height: 400px;            /* Define uma altura fixa para todas as fotos e vídeos */
-    border-radius: 12px;      /* Arredonda os cantos da moldura */
-    overflow: hidden;         /* Esconde tudo o que sair fora da moldura (ex: no efeito de zoom) */
-    transition: transform 0.3s ease; /* Faz com que o movimento de zoom seja suave */
-    border: 1px solid #808080; /* Uma borda cinzenta fina */
+    position: relative;
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Efeito quando passas o rato na moldura */
 .image-wrapper:hover {
-    transform: scale(1.02);   /* Aumenta a moldura ligeiramente (2%) */
+    transform: translateY(-10px);
+    border-color: white;
 }
 
-/* --- CONTEÚDO (CLASSE .FOTO APLICADA A IMAGENS E VÍDEOS) --- */
+
 .foto {
-    width: 100%;              /* Enche a largura da moldura */
-    height: 100%;             /* Enche a altura da moldura */
-    object-fit: cover;        /* Corta as bordas para a imagem/vídeo caber sem ficar esticado */
-    transition: transform 0.5s ease; /* Suaviza o zoom interno */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
 }
 
-/* Efeito de zoom na imagem/vídeo quando o rato passa por cima da moldura */
 .image-wrapper:hover .foto {
-    transform: scale(1.1);    /* Aumenta a imagem/vídeo em 10% */
+    transform: scale(1.1);
 }
 
-/* --- CAMADA DE TEXTO (OVERLAY) --- */
+
 .overlay {
-    position: absolute;       /* Retira o texto do lugar e permite flutuar sobre a foto */
-    bottom: 0;                /* Cola o texto no fundo da moldura */
-    left: 0;                  /* Alinha à esquerda */
-    right: 0;                 /* Estica até à direita */
-    padding: 20px;            /* Espaço entre o texto e as bordas da foto */
-    /* Cria um fundo escurecido de baixo para cima para facilitar a leitura */
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
-    text-align: left;         /* Alinha o texto à esquerda */
-    pointer-events: none;     /* Faz com que o texto seja "invisível" ao clique (ajuda nos vídeos) */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 20px;
+
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    text-align: left;
+    pointer-events: none;
 }
 
-/* --- RODAPÉ (FOOTER) --- */
+.overlay h1 {
+    font-size: 1.6rem;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.overlay p {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin: 5px 0 0;
+}
+
 .footer {
-    text-align: center;       /* Centra o copyright */
-    padding: 30px;            /* Espaço interno */
-    background: black;        /* Cor de fundo preta */
-    border-top: 1px solid #333; /* Linha cinzenta discreta no topo do rodapé */
-    margin-top: 50px;         /* Espaço entre a galeria e o rodapé */
+    text-align: center;
+    padding: 50px 20px;
+    background: black;
+    border-top: 1px solid #333;
+    margin-top: 60px;
 }
 
-/* --- RESPONSIVIDADE (TELEMÓVEIS) --- */
 @media screen and (max-width: 768px) {
-    /* Se o ecrã for menor que 768px, faz isto: */
-    .div2, .div3 {
-        grid-template-columns: 1fr; /* Força a galeria a ter apenas 1 coluna */
-    }
+    .headerhome { padding: 0 15px; height: 70px; }
+    .logo { height: 80px; }
+    .nav-links { gap: 10px; }
+
     .div1 h1 {
-        font-size: 2rem;       /* Diminui o tamanho do título para caber no ecrã do telemóvel */
+        font-size: 2.2rem;
+        letter-spacing: 4px;
+    }
+
+    .div2, .div3 {
+        grid-template-columns: 1fr; 
+        padding: 20px;
+    }
+
+    .image-wrapper {
+        height: 350px;
     }
 }

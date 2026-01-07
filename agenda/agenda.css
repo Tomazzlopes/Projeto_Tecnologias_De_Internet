@@ -1,12 +1,26 @@
-/* Importa as bases do teu estilo anterior */
+
 body {
     background-color: black;
     color: white;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
+    
+    padding-top: 100px; 
 }
 
-.headerbestof {
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+    opacity: 0.6; 
+}
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,37 +74,44 @@ body {
 
 .div1 {
     text-align: center;
-    padding: 40px 0;
-    border-bottom: 2px solid #ffffff;
+    padding: 60px 20px;
+    background: transparent;
 }
 
 .div1 h1 {
-    font-size: 3rem;
-    letter-spacing: 5px;
+    font-size: 4rem;
+    letter-spacing: 10px;
     margin: 0;
+    text-transform: uppercase;
 }
 
-/* --- ESTILO ESPECÍFICO DA AGENDA --- */
+.div1 p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
 .agenda-container {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 20px auto 100px auto;
     padding: 0 20px;
 }
 
 .agenda-item {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.07);
     margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #333;
-    transition: transform 0.3s ease, background 0.3s ease;
+    padding: 25px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
 .agenda-item:hover {
-    transform: translateX(10px);
-    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.15);
     border-color: #ffffff;
 }
 
@@ -98,19 +119,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 80px;
-    border-right: 2px solid #ffffff;
-    margin-right: 30px;
+    min-width: 100px;
+    border-right: 1px solid #ffffff;
+    margin-right: 40px;
 }
 
 .date-box .day {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    line-height: 1;
 }
 
 .date-box .month {
-    font-size: 0.9rem;
-    color: #808080;
+    font-size: 1rem;
+    color: #ffffff;
+    margin-top: 5px;
 }
 
 .event-details {
@@ -119,62 +142,64 @@ body {
 
 .event-details h2 {
     margin: 0;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
 }
 
 .event-details p {
-    margin: 5px 0 0;
+    margin: 8px 0 0;
     color: #b3b3b3;
+    font-size: 1rem;
 }
 
 .status-btn {
-    padding: 8px 15px;
+    padding: 10px 20px;
     border: 1px solid #ffffff;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    border-radius: 4px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    display: inline-block;
 }
 
-/* Estilo para eventos passados */
+
 .past-event {
-    opacity: 0.5;
+    opacity: 0.4;
     filter: grayscale(1);
 }
 
-/* Rodapé igual ao original */
 .footer {
     text-align: center;
-    padding: 30px;
+    padding: 40px;
     border-top: 1px solid #333;
-    margin-top: 50px;
+    background: black;
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
-@media (max-width: 768px) {
 
-    .headerbestof { padding: 0 15px; height: 70px; }
+@media (max-width: 768px) {
+    .headerhome { padding: 0 15px; height: 70px; }
     .logo { height: 80px; }
     .nav-links { gap: 10px; }
-    .div1 { margin-top: 70px; height: 100px; }
-    .div1 h1 { font-size: 1.8rem; }
 
-    #video-background {
-        top: 60px;
-        height: calc(100% - 60px);
+    .div1 h1 {
+        font-size: 2.5rem;
     }
-}
 
     .agenda-item {
         flex-direction: column;
         text-align: center;
+        padding: 30px 20px;
     }
+
     .date-box {
         border-right: none;
-        border-bottom: 2px solid #fff;
+        border-bottom: 1px solid #fff;
         margin-right: 0;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         padding-bottom: 10px;
+        min-width: 100%;
     }
+
+    .event-status {
+        margin-top: 25px;
+    }
+}
